@@ -113,7 +113,7 @@
             <div id="detailLine"></div>
             <br>
             <h1 style="font-family: monospace;">Games</h1>
-            <button id="gamesBtn">VIEW</button>
+            <button onclick="window.location.href='https://skeletalz.github.io/Slaxx-Hub/games.html'">VIEW</button>
             <div id="detailLine"></div>
             <br>
             <br>
@@ -124,7 +124,6 @@
         <script type="text/javascript">
             const scriptBtn = document.getElementById("scriptBtn");
             const copyPopup = document.getElementById("copyPopup");
-            const gamesBtn = document.getElementById("gamesBtn");
             const discordBtn = document.getElementById("discordBtn");
 
             scriptBtn.addEventListener("click", () => {
@@ -137,9 +136,6 @@
                 copyPopup.style.display = "block";
                 setTimeout(() => {copyPopup.style.display = "none";}, 1000);
             });
-            gamesBtn.addEventListener("click", () => {
-                window.open("https://skeletalz.github.io/Slaxx-Hub/games.html", '_blank');
-            }
 	    discordBtn.addEventListener("click", () => {
 		window.open("https://discord.io/Magik", '_blank');	
 	    }
