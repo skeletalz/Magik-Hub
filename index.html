@@ -1,145 +1,83 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Slaxx Hub</title>
-
-        <meta charset = "utf-8">
-		<link rel = "shortcut icon" type = "image/x-icon" href="logo.ico" />
-
-		<meta name = "author" content = "Slaxx Hub" />
-		<meta name = "description" content = "Slaxx Hub" />
-		<meta name = "keywords" content = "Slaxx, Hub, SlaxxHub, script, lua, krnl" />
-
-		<meta property = "og:title" content = "Slaxx Hub" />
-		<meta property = "og:description" content = "Official website for Slaxx Hub" />
-		<meta property = "og:type" content = "website" />
-
-        <style>
-            body {
-				background-color: rgb(25, 25, 25);
-                color: white;
-                font-family: "Trebuchet MS";
-                background-image: url(Background.png);
-				background-attachment: fixed;
-				background-size: cover;
-				background-repeat: no-repeat;
-			}
-
-            body::-webkit-scrollbar {
-                width: 12px;
-            }
-      
-            body::-webkit-scrollbar-thumb {
-                background-color: rgb(80, 80, 80);
-            }
-
-            #owlImage {
-                margin-top: 20px;
-                height: 90px;
-            }
-
-            #scriptBtn {
-                color: rgb(255, 255, 255);
-                background-color: rgb(45, 45, 45);
-                margin-top: 45px;
-                border: 0px;
-                border-radius: 5px;
-                cursor: pointer;
-                width: 650px;
-                height: 35px;
-            }
-
-            #copyPopup {
-                color: rgb(0, 0, 0);
-                background-color: rgb(255, 255, 255);
-                border: 0px;
-                border-radius: 4px;
-                text-align: center;
-                position: absolute;
-                display: none;
-                width: 150px;
-                height: 35px;
-            }
-
-            #gamesBtn {
-                background-color: rgb(45, 45, 45); 
-                color: rgb(255, 255, 255); 
-                font-size: large; 
-                border: 0px; 
-                border-radius: 2px;
-                cursor: pointer; 
-                width: 100px; 
-                height: 50px;
-            }
-
-            #discordBtn {
-                background-color: rgb(114, 137, 218); 
-                color: rgb(255, 255, 255); 
-                font-size: large; 
-                border: 0px; 
-                border-radius: 2px;
-                cursor: pointer; 
-                width: 100px; 
-                height: 50px;
-            }
-
-            #detailLine {
-                margin-top: 45px;
-                border: 1px solid rgb(153, 95, 39);
-                width: 500px;
-                height: 0px;
-            }
-
-            #copyBtn:hover {
-                background-color: rgb(70, 70, 70);
-            }
-        </style>
-    </head>
-    <body>
-        <input type="text" value="Copied to clipboard!" readonly id="copyPopup">
-        <center>
-            <img src="https://raw.githubusercontent.com/skeletalz/Slaxx-Hub/master/logo.ico" alt="Slaxx Hub Logo" id="slxImage">
-            <br>
-            <button id="scriptBtn"><span style="color: rgb(78, 153, 204);">loadstring</span>(game:<span style="color: rgb(78, 153, 204);">HttpGet</span>(<span style="color: rgb(80, 179, 179);">"</span><span style="color: rgb(149, 199, 144);">https://raw.githubusercontent.com/skeletalz/Slaxx-Hub/master/Loader.lua</span><span style="color: rgb(80, 179, 179);">"</span>))();</button>
-            <br>
-            <div id="detailLine"></div>
-            <br>
-            <h1 style="font-family: monospace;">What is Slaxx Hub?</h1>
-            <i style="color: rgb(255, 255, 255);">Slaxx Hub is a <span style="color: rgb(0, 192, 80);">FREE!</span> Roblox script hub developed by <span style="color: rgb(255, 255, 255);">SlaxxF</span>.<span style="color: rgb(255, 255, 255);">Slaxx Hub also has a <span style="color: rgb(255,215,0);">PREMIUM </span> offer for only <span style="color: rgb(0, 192, 80);">$5 </span>! <br><span style="color: rgb(255, 255, 255);"><br>It currently has 3+ games. It is made to be executed on Roblox exploits. It works on the exploits that are shown below.</i>
-            <div id="detailLine"></div>
-            <br>
-            <h1 style="font-family: monospace;">Exploits</h1>
-            <i style="color: rgb(180, 180, 180);"><a href="https://x.synapse.to/" target = "_blank" style="color: rgb(180, 180, 180);">Synapse X</a><br><br><a href="https://elymltd.selly.store/product/a6576d71/" target = "_blank" style="color: rgb(180, 180, 180);">Sentinel</a><br><br><a href="https://cdn.discordapp.com/attachments/657795414820651008/673024862163304488/Krnl_Bootstrapper.exe" target = "_blank" style="color: rgb(180, 180, 180);">Krnl</a></i>
-            <div id="detailLine"></div>
-            <br>
-            <h1 style="font-family: monospace;">Games</h1>
-            <button onclick="window.location.href='https://skeletalz.github.io/Slaxx-Hub/games.html'" id="gamesBtn">VIEW</button>
-            <div id="detailLine"></div>
-            <br>
-            <br>
-            <br>
-            <br>
-        </center>
-
-       	<script type="text/javascript">
-            const scriptBtn = document.getElementById("scriptBtn");
-            const copyPopup = document.getElementById("copyPopup");
-            const discordBtn = document.getElementById("discordBtn");
-
-            scriptBtn.addEventListener("click", () => {
-                const scriptBox = document.createElement("textarea");
-                scriptBox.value = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/skeletalz/Slaxx-Hub/master/Loader.lua"))();';
-                document.body.appendChild(scriptBox);
-                scriptBox.select();
-                document.execCommand("copy");
-                document.body.removeChild(scriptBox);
-                copyPopup.style.display = "block";
-                setTimeout(() => {copyPopup.style.display = "none";}, 1000);
-            });
-        discordBtn.addEventListener("click", () => {
-        window.open("https://discord.io/Magik", '_blank');    
-        })
+<html  >
+<head>
+  <!-- Site made with Mobirise Website Builder v5.1.4, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v5.1.4, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/logo.ico" type="image/x-icon">
+  <meta name="description" content="">
+  
+  
+  <title>Home</title>
+  <link rel="stylesheet" href="assets/tether/tether.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  
+  
+  
+  
+</head>
+<body>
+  
+  <section class="menu cid-s48OLK6784" once="menu" id="menu1-h">
     
-        </script>
-    </body>
+    <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+        <div class="container">
+            <div class="navbar-brand">
+                <span class="navbar-logo">
+                    <a href="https://mobiri.se">
+                        <img src="assets/images/logo.ico" alt="Mobirise" style="height: 3.8rem;">
+                    </a>
+                </span>
+                <span class="navbar-caption-wrap"><a class="navbar-caption text-primary display-7" href="index.html">Slaxx Hub</a></span>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true"><li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="Support.html">Support</a></li>
+                    <li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="page2.html">Games<br></a></li></ul>
+                
+                <div class="navbar-buttons mbr-section-btn"><a class="btn btn-white-outline display-4" href="https://discord.io/Magik" target="_blank">
+                        Discord</a></div>
+            </div>
+        </div>
+    </nav>
+
+</section>
+
+<section class="header1 cid-s48MCQYojq mbr-fullscreen mbr-parallax-background" id="header1-f">
+
+    
+
+    
+
+    <div class="align-center container">
+        <div class="row">
+            <div class="col-12 col-lg-7">
+                <h1 class="mbr-section-title mbr-fonts-style mb-3 display-1">Slaxx Hub</h1>
+                
+                <p class="mbr-text mbr-fonts-style display-7">What is Slaxx Hub?
+<br>Slaxx Hub is a Free Roblox Script Hub developed by SlaxxF. <br>Slaxx Hub also has a PREMIUM offer for only $5!
+<br>It currently has 3+ games. It is made to be executed on Roblox exploits. It works on the exploits that are shown below.<br></p>
+                <div class="mbr-section-btn mt-3"><a class="btn btn-white display-4" href="https://mobirise.com">Discord</a></div>
+            </div>
+        </div>
+    </div>
+</section><section style="background-color: #fff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif; color:#aaa; font-size:12px; padding: 0; align-items: center; display: flex;"><a href="https://mobirise.site/q" style="flex: 1 1; height: 3rem; padding-left: 1rem;"></a><p style="flex: 0 0 auto; margin:0; padding-right:1rem;"><a href="https://mobirise.site/i" style="color:#aaa;">Created with Mobirise</a> website creator</p></section><script src="assets/web/assets/jquery/jquery.min.js"></script>  <script src="assets/popper/popper.min.js"></script>  <script src="assets/tether/tether.min.js"></script>  <script src="assets/bootstrap/js/bootstrap.min.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/parallax/jarallax.min.js"></script>  <script src="assets/dropdown/js/nav-dropdown.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>  <script src="assets/theme/js/script.js"></script>  
+  
+  
+</body>
 </html>
