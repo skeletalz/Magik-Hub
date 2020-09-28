@@ -1,0 +1,4 @@
+_G.Games = {
+ ["4623386862"] = {Name = "Piggy", Script = "Piggy.lua",ID = 4623386862,Status = 4},
+ ["286090429"] = {Name = "Arsenal", Script = "Arsenal.lua",ID= 286090429 ,Status = 4}
+}
