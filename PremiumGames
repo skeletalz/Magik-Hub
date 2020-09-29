@@ -1,4 +1,5 @@
 _G.Games = {
  ["3956818381"] = {Name = "Ninja Legends", Script = "NinjaLegends.lua",ID = 3956818381,Status = 4},
- ["286090429"] = {Name = "Arsenal", Script = "Arsenal.lua",ID= 286090429 ,Status = 4}
+ ["286090429"] = {Name = "Arsenal", Script = "Arsenal.lua",ID= 286090429 ,Status = 4},
+ ["537413528"] = {Name = "Build a Boat", Script = "BABFT.lua", ID= 537413528, Status = 4}
 }
