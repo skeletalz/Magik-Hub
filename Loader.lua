@@ -1,4 +1,4 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/skeletalz/Magik-Hub/master/GamesList.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/skeletalz/Slaxx-Hub/master/GamesList.lua"))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/skeletalz/Main-Stuff/master/Notification%20Service"))()
 Notification("Magik Hub","Magik Hub is being loaded!",{Enter = 0.6,Exit = 0.8})
 wait(1.2)
@@ -13,7 +13,7 @@ local ingame = false
 for i,gam in pairs(_G.Games) do
   if game.PlaceId == gam.ID then
      ingame = true
-     loadstring(game:HttpGet("https://raw.githubusercontent.com/skeletalz/Magik-Hub/master/games/"..gam.Script))()
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/skeletalz/Slaxx-Hub/master/games/"..gam.Script))()
  else
      ingame = false
   end
