@@ -1,6 +1,6 @@
 loadstring(game:HttpGet("https://raw.githubusercontent.com/skeletalz/Slaxx-Hub/master/GamesList.lua"))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/skeletalz/Main-Stuff/master/Notification%20Service"))()
-Notification("Magik Hub","Magik Hub is being loaded!",{Enter = 0.6,Exit = 0.8})
+Notification("Slaxx Hub","Slaxx Hub is being loaded!",{Enter = 0.6,Exit = 0.8})
 wait(1.2)
 local noter = game.Players.LocalPlayer:WaitForChild("PlayerGui").Notification
 game:GetService("TweenService"):Create(noter.Scroll.News,TweenInfo.new(0.8),{ImageTransparency = 1}):Play()
@@ -20,7 +20,7 @@ for i,gam in pairs(_G.Games) do
 end
 if ingame == false then
   loadstring(game:HttpGet("https://raw.githubusercontent.com/skeletalz/Main-Stuff/master/Notification%20Service"))()
-  Notification("Magik Hub","Your not in a supported game!",{Enter = 0.6,Exit = 0.8})
+  Notification("Slaxx Hub","Your not in a supported game!",{Enter = 0.6,Exit = 0.8})
   wait(1.2)
   local noter = game.Players.LocalPlayer:WaitForChild("PlayerGui")["Notification"]
   game:GetService("TweenService"):Create(noter.Scroll.News,TweenInfo.new(0.8),{ImageTransparency = 1}):Play()
